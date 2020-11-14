@@ -10,6 +10,10 @@
     <string name="fila_num">#</string>
     <string name="listar">Listar</string>
     <string name="crear">Crear</string>
+    <string name="mensaje_error_id">Digite una cedula</string>
+    <string name="mensaje_error_name">Digite un nombre</string>
+    <string name="mensaje_error_lastname">Digite un apellido</string>
+    <string name="mensaje_guardado_exitosamente">Persona guardada exitosamente</string>
     <string-array name="opciones">
         <item>@string/crear</item>
         <item>@string/listar</item>

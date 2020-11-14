@@ -11,4 +11,8 @@
     <string name="fila_num">#</string>
     <string name="listar">List</string>
     <string name="crear">Create</string>
+    <string name="mensaje_error_id">Type the identification number</string>
+    <string name="mensaje_error_name">Type a name</string>
+    <string name="mensaje_error_lastname">Type a lastname</string>
+    <string name="mensaje_guardado_exitosamente">Person saved successfully</string>
 </resources>

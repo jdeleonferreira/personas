@@ -23,15 +23,40 @@ public class CrearPersonas extends AppCompatActivity {
         String id, name, lastName;
         Persona p;
 
-        id = this.id.getText().toString();
-        name = this.name.getText().toString();
-        lastName = this.lastName.getText().toString();
+        if(validar()) {
 
-        p = new Persona(id, name, lastName);
-        p.save();
+            id = this.id.getText().toString();
+            name = this.name.getText().toString();
+            lastName = this.lastName.getText().toString();
 
-        Toast.makeText(this, "Persona guardada exitosamente",Toast.LENGTH_LONG).show();
-        this.clear(v);
+            p = new Persona(id, name, lastName);
+            p.save();
+
+            Toast.makeText(this, getString(R.string.mensaje_guardado_exitosamente), Toast.LENGTH_LONG).show();
+            this.clear(v);
+        }
+    }
+
+    public boolean validar(){
+        if(id.getText().toString().isEmpty()){
+            id.setError(getString(R.string.mensaje_error_id));
+            id.requestFocus();
+            return false;
+        }
+
+        if(name.getText().toString().isEmpty()){
+            name.setError(getString(R.string.mensaje_error_name));
+            name.requestFocus();
+            return false;
+        }
+
+        if(lastName.getText().toString().isEmpty()){
+            lastName.setError(getString(R.string.mensaje_error_lastname));
+            lastName.requestFocus();
+            return false;
+        }
+
+        return true;
     }
 
     public void clear(View v){
