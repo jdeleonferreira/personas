@@ -9,4 +9,6 @@
     <string name="limpiar">Clear</string>
     <string name="titulo_listar_persona">PEOPLE LIST</string>
     <string name="fila_num">#</string>
+    <string name="listar">List</string>
+    <string name="crear">Create</string>
 </resources>

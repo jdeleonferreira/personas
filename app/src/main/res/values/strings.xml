@@ -8,4 +8,10 @@
     <string name="limpiar">Limpiar</string>
     <string name="titulo_listar_persona">LISTAR PERSONAS</string>
     <string name="fila_num">#</string>
+    <string name="listar">Listar</string>
+    <string name="crear">Crear</string>
+    <string-array name="opciones">
+        <item>@string/crear</item>
+        <item>@string/listar</item>
+    </string-array>
 </resources>
