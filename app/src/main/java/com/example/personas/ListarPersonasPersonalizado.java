@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ListaPersonasPersonalizado extends AppCompatActivity {
+public class ListarPersonasPersonalizado extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

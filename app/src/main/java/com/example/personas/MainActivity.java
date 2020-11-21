@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         intent = new Intent(MainActivity.this
-                                , ListarPersonas.class);
+                                , ListarPersonasPersonalizado.class);
                         startActivity(intent);
                         break;
                 }

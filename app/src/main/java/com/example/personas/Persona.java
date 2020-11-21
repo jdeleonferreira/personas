@@ -1,14 +1,18 @@
 package com.example.personas;
 
+import android.graphics.drawable.Drawable;
+
 public class Persona {
     private String identification;
     private String name;
     private String lastName;
+    private int photo;
 
-    public Persona(String identification, String name, String lastName) {
+    public Persona(String identification, String name, String lastName, int photo) {
         this.identification = identification;
         this.name = name;
         this.lastName = lastName;
+        this.photo = photo;
     }
 
     public String getIdentification() {
@@ -34,6 +38,9 @@ public class Persona {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    public int getPhoto(){ return photo; }
+    public void setPhoto(int photo){ this.photo = photo; }
 
     public void save(){
         Datos.guardar(this);
