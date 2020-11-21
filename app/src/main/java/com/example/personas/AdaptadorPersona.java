@@ -39,7 +39,7 @@ public class AdaptadorPersona extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        res = convertView.getResources();
+        res = contexto.getResources();
         View v = convertView;
 
         LayoutInflater inf = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -57,6 +57,6 @@ public class AdaptadorPersona extends BaseAdapter {
         nombre.setText(p.getName());
         apellido.setText(p.getLastName());
 
-        return null;
+        return v;
     }
 }

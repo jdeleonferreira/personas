@@ -7,8 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class CrearPersonas extends AppCompatActivity {
     private EditText id, name, lastName;
+    private int[] photos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +20,11 @@ public class CrearPersonas extends AppCompatActivity {
         id = findViewById(R.id.txtIdentification);
         name = findViewById(R.id.txtName);
         lastName = findViewById(R.id.txtLastName);
+
+        photos = new int[3];
+        photos[0] = R.drawable.images;
+        photos[1] = R.drawable.images2;
+        photos[2] = R.drawable.images3;
     }
 
     public void save(View v){
@@ -29,7 +37,7 @@ public class CrearPersonas extends AppCompatActivity {
             name = this.name.getText().toString();
             lastName = this.lastName.getText().toString();
 
-            p = new Persona(id, name, lastName);
+            p = new Persona(id, name, lastName, randomPhoto());
             p.save();
 
             Toast.makeText(this, getString(R.string.mensaje_guardado_exitosamente), Toast.LENGTH_LONG).show();
@@ -64,5 +72,10 @@ public class CrearPersonas extends AppCompatActivity {
         this.name.setText("");
         this.lastName.setText("");
         this.id.requestFocus();
+    }
+
+    public int randomPhoto(){
+        Random r = new Random();
+        return photos[r.nextInt(photos.length)];
     }
 }
